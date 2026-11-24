@@ -15,6 +15,7 @@
      downloads     downloads no CurseForge (à mão, ver a data em baixo)
      modrinth      nome do projeto no Modrinth: soma os downloads de lá
      destaque      true: aparece na aba Destaques
+     imagem        captura em img/capas/, aparece no topo do cartão
 
    Downloads do CurseForge atualizados a 23/11/2026.
 ------------------------------------------------------------------- */
@@ -39,6 +40,7 @@ window.PROJETOS = [
         "itens": [
           {
             "nome": "DeskStats",
+            "imagem": "img/capas/deskstats.webp",
             "en": {
               "tag": "Android app + PC",
               "resumo": "Your PC in a phone widget: CPU, GPU, RAM and temperatures.",
@@ -167,6 +169,7 @@ window.PROJETOS = [
         "itens": [
           {
             "nome": "MAIA",
+            "imagem": "img/capas/maia.webp",
             "en": {
               "tag": "Personal assistant · Linux",
               "resumo": "AI personal assistant for Linux: talks, searches, runs commands and remembers you.",
@@ -263,6 +266,7 @@ window.PROJETOS = [
         "itens": [
           {
             "nome": "ASCII Art by RibeiroMD",
+            "imagem": "img/capas/ascii.webp",
             "en": {
               "tag": "Webapp",
               "resumo": "Turns any image into art made of characters, right in the browser.",
@@ -500,6 +504,7 @@ window.PROJETOS = [
       },
       {
         "nome": "DMR | KBMacro",
+        "imagem": "img/capas/kbmacro.webp",
         "en": {
           "tag": "Automation · Linux",
           "resumo": "Turns one key into another key, a combo or a timed macro, on Linux.",
