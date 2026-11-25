@@ -191,7 +191,7 @@
   .pico-i svg { width: 100%; height: 100%; }
   /* Capa do cartão: captura do projeto, ou um fundo com o ícone quando não há */
   .capa {
-    margin: -24px -22px 18px; aspect-ratio: 16 / 9; overflow: hidden;
+    margin: -24px -22px 18px; height: 130px; overflow: hidden;
     border-radius: calc(var(--radius) - 1px) calc(var(--radius) - 1px) 0 0;
     border-bottom: 1px solid var(--border); background: #120010;
   }
@@ -204,15 +204,13 @@
       repeating-linear-gradient(45deg, transparent 0 14px, rgba(255, 255, 255, .025) 14px 15px),
       #1d0619;
   }
-  .capa.vazia svg { width: 64px; height: 64px; filter: drop-shadow(0 8px 20px rgba(0, 0, 0, .5)); }
-  .capa.vazia img { width: 64px; height: auto; object-fit: contain; image-rendering: pixelated; }
+  .capa.vazia svg { width: 44px; height: 44px; filter: drop-shadow(0 8px 20px rgba(0, 0, 0, .5)); }
+  .capa.vazia img { width: 44px; height: auto; object-fit: contain; image-rendering: pixelated; }
 
-  /* Destaques: o primeiro ocupa duas colunas, os 5 fecham duas linhas certas */
-  .pgrid.destaques { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .pgrid.destaques .project:first-child { grid-column: span 2; }
-  @media (max-width: 901px) {
-    .pgrid.destaques { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  }
+  /* Destaques: três colunas iguais e a última linha centrada */
+  .pgrid.destaques { display: flex; flex-wrap: wrap; justify-content: center; }
+  .pgrid.destaques .project { flex: 0 0 calc((100% - 44px) / 3); min-width: 0; }
+  @media (max-width: 901px) { .pgrid.destaques .project { flex-basis: calc((100% - 22px) / 2); } }
 
   #dlg-projeto .dlg-capa { width: 100%; display: block; border-bottom: 1px solid var(--border); }
   .pgrid .project:focus-visible { outline: 2px solid var(--ring); outline-offset: 3px; }
@@ -330,12 +328,12 @@
             mask-image: linear-gradient(to right, #000 85%, transparent); }
     #tabs::-webkit-scrollbar { display: none; }
 
-    .pgrid, .pgrid.destaques { grid-template-columns: 1fr; gap: 16px; }
-    .pgrid.destaques .project:first-child { grid-column: auto; }
-    .pgrid .project { padding: 20px 18px 16px; }
-    .capa { margin: -20px -18px 16px; }
-    .pgrid .project h3 { font-size: 1.15rem; }
-    .pgrid .project p { font-size: 0.92rem; }
+    .pgrid { grid-template-columns: 1fr; gap: 12px; }
+    .pgrid.destaques .project { flex-basis: 100%; }
+    .pgrid .project { padding: 16px 16px 14px; }
+    .capa { height: 110px; margin: -16px -16px 14px; }
+    .pgrid .project h3 { font-size: 1.05rem; margin-bottom: 8px; }
+    .pgrid .project p { font-size: 0.86rem; margin-bottom: 10px; }
   }
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
